@@ -2,7 +2,7 @@ package com.jmit.pojo;
 
 import java.util.Date;
 
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,6 +17,7 @@ public class HospitalSet extends BaseEntity{
     /**
     * 编号
     */
+    @TableId(value = "id",type = IdType.AUTO)
     private Long id;
 
     /**
@@ -52,7 +53,7 @@ public class HospitalSet extends BaseEntity{
     /**
     * 状态
     */
-    private Byte status;
+    private Integer status;
 
     /**
     * 创建时间
@@ -65,7 +66,9 @@ public class HospitalSet extends BaseEntity{
     private Date updateTime;
 
     /**
-    * 逻辑删除(1:已删除，0:未删除)
+    * (1:已删除，0:未删除)
+     * @TableLogic注解表示逻辑删除,删除方法会变成修改
     */
+    @TableLogic
     private Integer isDeleted;
 }
