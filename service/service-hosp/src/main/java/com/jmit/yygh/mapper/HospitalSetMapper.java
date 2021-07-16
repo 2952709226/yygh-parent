@@ -1,14 +1,14 @@
 package com.jmit.yygh.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.jmit.pojo.HospitalSet;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 
+import javax.annotation.Resource;
 import java.util.List;
 
-@Mapper
-public interface HospitalSetMapper {
+@Resource
+public interface HospitalSetMapper extends BaseMapper<HospitalSet> {
 
-    @Select("select * from hospital_set")
-    List<HospitalSet> findAll();
+
 }
