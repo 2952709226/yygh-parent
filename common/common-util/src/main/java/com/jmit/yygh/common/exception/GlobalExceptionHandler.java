@@ -17,6 +17,9 @@ public class GlobalExceptionHandler {
         return Result.fail();
     }
 
+    /*
+    * 自定义异常
+    * */
     @ExceptionHandler(YyghException.class)
     @ResponseBody
     public Result error(YyghException e) {

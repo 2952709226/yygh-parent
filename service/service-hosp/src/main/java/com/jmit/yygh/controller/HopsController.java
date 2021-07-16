@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.jmit.pojo.HospitalSet;
 import com.jmit.pojo.vo.hosp.HospitalSetQueryVo;
+import com.jmit.yygh.common.exception.YyghException;
 import com.jmit.yygh.common.result.Result;
 import com.jmit.yygh.common.utils.MD5;
 import com.jmit.yygh.service.HospService;
@@ -89,6 +90,12 @@ public class HopsController {
     //5.根据id获取医院设置
     @GetMapping("getIdHospitalSet/{id}")
     public Result getByIdHospitalSet(@PathVariable Long id){
+//        try {
+//            //模拟异常
+//            int a = 1/0;
+//        }catch (Exception e){
+//            throw new YyghException("报告有错误啦!",201);
+//        }
         HospitalSet byId = hospServiceImpl.getById(id);
         return Result.ok(byId);
     }
