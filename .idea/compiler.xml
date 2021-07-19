@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="model" />
+        <module name="service_user" />
         <module name="service-hosp" />
         <module name="common-util" />
         <module name="service-util" />
@@ -22,6 +23,7 @@
       <module name="service" options="-parameters" />
       <module name="service-hosp" options="-parameters" />
       <module name="service-util" options="-parameters" />
+      <module name="service_user" options="-parameters" />
       <module name="yygh-parent" options="-parameters" />
     </option>
   </component>
